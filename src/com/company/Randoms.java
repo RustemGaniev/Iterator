@@ -19,13 +19,6 @@ public class Randoms implements Iterable<Integer> {
 
     }
 
-    public Randoms addRandoms(Integer i) {
-        List<Integer> myRandom = new ArrayList<>();
-        myRandom.add(i);
-        return this;
-    }
-
-
     @Override
     public Iterator<Integer> iterator() {
 
