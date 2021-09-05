@@ -8,14 +8,25 @@ import java.util.function.Consumer;
 
 public class Randoms implements Iterable<Integer> {
 
-    List<Integer> myRandom = new ArrayList<>();
+    int max;
+    int min;
+
+public Randoms(int min, int max){
+    this.min = min;
+    this.max = max;
+
+}
+
+public Randoms() {
+
+}
 
 
-    public int Randoms(int min, int max) {
+    public int Randomms(Randoms random) {
         Random a = new Random();
-        int dif = max - min;
+        int dif = random.max - random.min;
         int i = a.nextInt(dif + 1);
-        return min + i;
+        return random.min + i;
 
     }
 
@@ -27,17 +38,14 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public boolean hasNext() {
-                if (next < myRandom.size()) {
                     return true;
                 }
-                return false;
-            }
+
 
             @Override
             public Integer next() {
-                Integer r = myRandom.get(next);
-                next++;
-                return r;
+                Integer i = Randomms(new Randoms(90, 100));
+                return i;
             }
 
             @Override
